@@ -1,8 +1,13 @@
 let totalSlides = document.querySelectorAll('.slider--item').length;
 let currentSlide = 0;
 
+let sliderWidth = document.querySelector('.slider').clientWidth;
+
 document.querySelector('.slider--widht').style.width = 
-    `calc(100vw * ${totalSlides})`;
+    `${sliderWidth * totalSlides}px`;
+    
+document.querySelector('.slider--controls').style.width = 
+`${sliderWidth}px`;
 document.querySelector('.slider--controls').style.height = 
     `${document.querySelector('.slider').clientHeight}px`;
 
